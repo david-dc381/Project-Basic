@@ -1,0 +1,19 @@
+// menu-pc
+.menu-pc {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2em 0;
+  @include font-primary-medium;
+  font-size: 1.1rem;
+  position: fixed;
+  z-index: $z-fixed;
+
+ .menu-principal {
+   a {
+     color: #fff;
+     padding: 0 1em;
+   }
+ }
+}

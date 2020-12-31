@@ -1,0 +1,55 @@
+/* Roboto */
+/* Lato */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+p, span, a {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  min-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.menu-pc {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2em 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: fixed;
+  z-index: 100;
+}
+.menu-pc .menu-principal a {
+  color: #fff;
+  padding: 0 1em;
+}
+
+/*# sourceMappingURL=tyles.css.map */

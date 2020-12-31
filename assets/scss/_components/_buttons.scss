@@ -1,0 +1,49 @@
+.main-button {
+  padding: 1em 2em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem; 
+  outline: none; // cuando se presione el button no se muestre sus bordes
+  @include font-secondary-regular();
+}
+
+.button--banner {
+  @extend .main-button;
+  background: $color-button-banner;
+  color: #fff;
+  transition: all .1s ease-out;
+  
+  &:hover {
+    animation: fadeInLeft .19s ease-in-out;
+    animation-delay: 100ms;
+    @keyframes fadeInLeft {
+      0% {
+        transform: translateX(0px);
+        background: $color-button-banner;
+      }
+      25% {
+        transform: translateX(0px);
+        background: linear-gradient(to left, #33c8c1 0%, #119bd2 50%,
+#33c8c1 100%);
+      }
+
+      50% {
+        transform: translateX(0px);
+        background: linear-gradient(to left, #33c8c1 0%, #119bd2 50%,
+#33c8c1 100%);
+      }
+      75% {
+        transform: translateX(0px);
+        background: linear-gradient(to left, #33c8c1 0%, #119bd2 50%,
+#33c8c1 100%);
+      }
+      100% {
+        transform: translateX(0px);
+        background: linear-gradient(to left, #33c8c1 0%, #33c8c1 50%,
+#119bd2 100%);
+      }
+    }
+  }
+
+}
