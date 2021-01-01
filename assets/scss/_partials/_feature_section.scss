@@ -1,0 +1,98 @@
+.feature {
+  &::before {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 5px;
+    background: $color-primary;
+    margin: 15px auto;
+  }
+  &__title {
+    opacity: .83;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    @include font-primary-light;
+    span {
+      @include font-primary-bold;
+    }  
+  }
+
+  .features-container {
+    width: 90%;
+    margin:  0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .feature-card {
+    width: 350px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 0px 0px #333;
+    padding: 10px 10px 50px 10px;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    transition: all .3s ease-in;
+
+
+    &:hover {
+      transition: all .5s ease-out;
+      border: 2px solid #fe8464;
+      
+      .back-img {
+        transition: all .3s ease-in;
+        transform: rotate(45deg);
+      }
+    }
+    
+    .img-div {
+      position: relative;
+      margin: 50px 0;
+      img:nth-child(1) {
+        position: absolute;
+        left: 90px;
+        top: -19px;
+      }
+      i {
+        position: relative;
+        left: -60px;
+        top: -25px;
+        font-size: 30px;
+        color: #fff;
+      }
+      .back-img {
+        transition: all .3s ease-in;
+      }
+      .medio {
+        position: relative;
+        left: 84px !important;
+      }
+      .ultimo {
+        position: relative;
+        left: 93px !important;
+      }
+    }
+    
+    &__title {
+      @include font-secondary-bold;
+      font-size: 1.7rem;
+      line-height: 1.7;
+      color: #333;
+    }
+    &__description {
+      @include font-primary-regular;
+      line-height: 1.7;
+      padding: 0 20px;
+      color: #777;
+    }
+    &__learn-more {
+      a, i {
+        margin-right: 1rem;
+        margin-top: 2rem;
+        color: #333;
+      }
+    }
+  }
+}

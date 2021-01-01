@@ -52,6 +52,10 @@ li {
   padding: 0 1em;
 }
 
+main {
+  background-color: #fafafa;
+}
+
 .main-banner__img {
   width: 100%;
   height: 750px;
@@ -108,6 +112,99 @@ li {
 .main-banner .main-aplication img:hover {
   transition: all 0.3s ease-in;
   opacity: 1;
+}
+
+.feature::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(to right, #fe8464 0%, #f66e9a 50%, #fe8464 100%);
+  margin: 15px auto;
+}
+.feature__title {
+  opacity: 0.83;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.feature__title span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.feature .features-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.feature .feature-card {
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 0px 0px #333;
+  padding: 10px 10px 50px 10px;
+  margin-top: 20px;
+  background-color: #fff;
+  border: 2px solid #fff;
+  transition: all 0.3s ease-in;
+}
+.feature .feature-card:hover {
+  transition: all 0.5s ease-out;
+  border: 2px solid #fe8464;
+}
+.feature .feature-card:hover .back-img {
+  transition: all 0.3s ease-in;
+  transform: rotate(45deg);
+}
+.feature .feature-card .img-div {
+  position: relative;
+  margin: 50px 0;
+}
+.feature .feature-card .img-div img:nth-child(1) {
+  position: absolute;
+  left: 90px;
+  top: -19px;
+}
+.feature .feature-card .img-div i {
+  position: relative;
+  left: -60px;
+  top: -25px;
+  font-size: 30px;
+  color: #fff;
+}
+.feature .feature-card .img-div .back-img {
+  transition: all 0.3s ease-in;
+}
+.feature .feature-card .img-div .medio {
+  position: relative;
+  left: 84px !important;
+}
+.feature .feature-card .img-div .ultimo {
+  position: relative;
+  left: 93px !important;
+}
+.feature .feature-card__title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+  line-height: 1.7;
+  color: #333;
+}
+.feature .feature-card__description {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  padding: 0 20px;
+  color: #777;
+}
+.feature .feature-card__learn-more a, .feature .feature-card__learn-more i {
+  margin-right: 1rem;
+  margin-top: 2rem;
+  color: #333;
 }
 
 .main-button, .button--banner {
