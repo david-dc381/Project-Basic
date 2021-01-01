@@ -8,6 +8,7 @@
   @include font-secondary-regular();
 }
 
+// para el boton del banner
 .button--banner {
   @extend .main-button;
   background: $color-button-banner;
@@ -47,4 +48,29 @@
     }
   }
 
+}
+
+
+// para los botones de about
+.button--about {
+  background: $color-primary;
+  color: #fff;
+  transition: all .5s ease-out;
+  
+  &:hover {
+    animation: fadeInLeft .2s ease-in;
+    
+    @keyframes fadeInLeft {
+      0% {
+        transform: translateX(0px);
+        background: $color-primary;
+      }
+      
+      100% {
+        transform: translateX(0px);
+        background: linear-gradient(to right, 
+       #f66e9a 0%, #fe8464 50%, #f66e9a 100%);
+      }
+    }
+  }
 }
