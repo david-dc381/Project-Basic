@@ -1,0 +1,120 @@
+.why {
+  width: 100%;
+
+  &__container {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__image {
+    position: relative;
+    &::before {
+      content: "";
+      width: 500px;
+      height: 430px;
+      display: block;
+      background-color: #03125d;
+      position: absolute;
+      z-index: $z-fixed;
+      opacity: .4;
+      border-radius: 15px;
+    }
+    .background-video {
+      width: 500px;
+      z-index: $z-tooltip;
+      position: relative;
+    }
+    .dots-img {
+      width: 400px;
+      height: 300px;
+      position: absolute;
+      top: 160px;
+      left: -40px;
+    }
+
+    .video-icon {
+      margin: 35% -55%;
+      position: absolute;
+      z-index: $z-fixed;
+      font-size: 4rem;
+      color: #fff;
+    }
+  }
+
+  &__body {
+    padding: 0 0 0 7em;
+  }
+  &__title {
+    font-size: 2.2rem;
+    opacity: .9;
+    margin-bottom: 2rem;
+    @include font-primary-light;
+    span {
+      @include font-primary-bold;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      width: 160px;
+      height: 5px;
+      background-color: #fe8464;
+      margin-bottom: 20px;
+    }
+  }
+  &__copy {
+    @include font-secondary-regular;
+    line-height: 1.5;
+    opacity: .75;
+    width: 450px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .counter__information {
+    text-align: center;
+    position: relative;
+    width: 156px;
+    margin-top: 80px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 155px;
+      height: 120px;
+      border-radius: 60px;
+      margin: 0 50px;
+      top: -24px;
+      left: -51px;
+      background: linear-gradient(to bottom, #33c8c1 0%, #33c8c1 50%,
+#119bd2 100%);
+      transform: rotate(-45deg);
+    }
+    span, p {
+      position: relative;
+      color: #fff;
+    }
+    span {
+      @include font-secondary-bold;
+      font-size: 1.2rem;
+      line-height: 2;
+    }
+  }
+  .counter__information:nth-child(2) {
+      &::before {
+      background: $color-primary;
+    }
+  }
+  .counter__information:nth-child(3) {
+    &::before {
+      background: linear-gradient(to bottom, #3338c8 0%, #3b74ca 50%, #1195ca 100%);
+    }
+  }
+}

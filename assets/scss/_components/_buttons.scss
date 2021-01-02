@@ -58,9 +58,9 @@
   transition: all .5s ease-out;
   
   &:hover {
-    animation: fadeInLeft .2s ease-in;
+    animation: fadeInLeft2 .2s ease-in;
     
-    @keyframes fadeInLeft {
+    @keyframes fadeInLeft2 {
       0% {
         transform: translateX(0px);
         background: $color-primary;

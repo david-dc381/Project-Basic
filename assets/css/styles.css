@@ -253,6 +253,119 @@ main {
   width: 500px;
 }
 
+.why {
+  width: 100%;
+}
+.why__container {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.why__image {
+  position: relative;
+}
+.why__image::before {
+  content: "";
+  width: 500px;
+  height: 430px;
+  display: block;
+  background-color: #03125d;
+  position: absolute;
+  z-index: 100;
+  opacity: 0.4;
+  border-radius: 15px;
+}
+.why__image .background-video {
+  width: 500px;
+  z-index: 10;
+  position: relative;
+}
+.why__image .dots-img {
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  top: 160px;
+  left: -40px;
+}
+.why__image .video-icon {
+  margin: 35% -55%;
+  position: absolute;
+  z-index: 100;
+  font-size: 4rem;
+  color: #fff;
+}
+.why__body {
+  padding: 0 0 0 7em;
+}
+.why__title {
+  font-size: 2.2rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.why__title span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+}
+.why__title::before {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 5px;
+  background-color: #fe8464;
+  margin-bottom: 20px;
+}
+.why__copy {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0.75;
+  width: 450px;
+}
+.why .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.why .counter__information {
+  text-align: center;
+  position: relative;
+  width: 156px;
+  margin-top: 80px;
+}
+.why .counter__information::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 155px;
+  height: 120px;
+  border-radius: 60px;
+  margin: 0 50px;
+  top: -24px;
+  left: -51px;
+  background: linear-gradient(to bottom, #33c8c1 0%, #33c8c1 50%, #119bd2 100%);
+  transform: rotate(-45deg);
+}
+.why .counter__information span, .why .counter__information p {
+  position: relative;
+  color: #fff;
+}
+.why .counter__information span {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+.why .counter__information:nth-child(2)::before {
+  background: linear-gradient(to right, #fe8464 0%, #f66e9a 50%, #fe8464 100%);
+}
+.why .counter__information:nth-child(3)::before {
+  background: linear-gradient(to bottom, #3338c8 0%, #3b74ca 50%, #1195ca 100%);
+}
+
 .main-button, .button--banner {
   padding: 1em 2em;
   border: none;
@@ -302,9 +415,9 @@ main {
   transition: all 0.5s ease-out;
 }
 .button--about:hover {
-  animation: fadeInLeft 0.2s ease-in;
+  animation: fadeInLeft2 0.2s ease-in;
 }
-@keyframes fadeInLeft {
+@keyframes fadeInLeft2 {
   0% {
     transform: translateX(0px);
     background: linear-gradient(to right, #fe8464 0%, #f66e9a 50%, #fe8464 100%);
