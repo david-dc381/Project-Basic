@@ -535,6 +535,61 @@ main {
   font-weight: normal;
 }
 
+.blog {
+  width: 100%;
+  margin: 5rem auto;
+}
+.blog__title {
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.blog__title::before {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(to right, #fe8464 0%, #f66e9a 50%, #fe8464 100%);
+  margin-bottom: 1rem;
+}
+.blog .posts {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.blog .posts__container {
+  margin: 0 1rem;
+}
+.blog .posts .post {
+  width: 370px;
+}
+.blog .posts .post__author {
+  margin: 1rem 0;
+}
+.blog .posts .post__author span {
+  opacity: 0.7;
+}
+.blog .posts .post__author span:nth-child(2) {
+  margin: 0 2rem;
+}
+.blog .posts .post__description {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+.blog .posts .post__description + span {
+  margin-right: 1rem;
+  color: #fe8464;
+}
+.blog .posts .post__description ~ i {
+  color: #fe8464;
+}
+
 .main-button, .button--banner {
   padding: 1em 2em;
   border: none;

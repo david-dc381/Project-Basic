@@ -1,0 +1,58 @@
+.blog {
+  width: 100%;
+  margin: 5rem auto;
+  &__title {
+    // margin-left: 5.3rem;
+    width: 88%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 150px;
+      height: 5px;
+      background: $color-primary;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .posts {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    &__container {
+      margin: 0 1rem;
+    }
+    .post {
+      width: 370px;
+      &__author {
+        margin: 1rem 0;
+        span {
+          opacity: .7;
+        }
+        span:nth-child(2) {
+          margin: 0 2rem;
+        }
+      }
+
+      &__description {
+        @include font-primary-regular;
+        font-size: 1.5rem;
+        opacity: .9;
+        margin-bottom: 2rem;
+      }
+      &__description + span { // usamos selector de hermano directo
+        margin-right: 1rem;
+        color: #fe8464;
+        
+      }
+      &__description ~ i { // usamos selector de hermano cualquiera
+        color: #fe8464;
+      }
+    }
+  }
+}
