@@ -8,6 +8,10 @@
     margin-right: auto;
     font-size: 2rem;
     margin-bottom: 2rem;
+    @include font-primary-light;
+    span {
+      @include font-primary-bold;
+    }
 
     &::before {
       content: "";

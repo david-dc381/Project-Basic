@@ -545,6 +545,13 @@ main {
   margin-right: auto;
   font-size: 2rem;
   margin-bottom: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+.blog__title span {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-weight: bolder;
 }
 .blog__title::before {
   content: "";
