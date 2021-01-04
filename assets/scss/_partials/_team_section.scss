@@ -1,0 +1,184 @@
+.team {
+  margin: 5rem 0;
+
+  // members section
+  .members {
+    &__title {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 4rem;
+      opacity: .83;
+      @include font-primary-light;
+      span {
+        @include font-primary-bold;
+      }
+      &::before {
+        content: "";
+        width: 150px;
+        height: 5px;
+        display: block;
+        background: $color-primary;
+        margin: 20px auto;
+      }
+    }
+    &__container {
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      position: relative;
+
+      .card {
+        // hover para cambia el fondo de las redes sociales
+        &:hover {
+          .card__social {
+            background: $color-primary;
+          }        
+        }
+        
+        &__figure {
+          width: 100%;
+          img {
+            width: 350px;
+            height: 293px;
+            vertical-align: top;
+          }
+        }
+
+        &__social {
+          position: relative;
+          top: -82px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          width: 63%;
+          margin: auto;
+          background-color: rgba(255, 255, 255, 0.3);
+          border-radius: 25px;
+          padding: 20px;
+          cursor: pointer;
+          transition: all 0.4s ease-in;
+
+          i {
+            margin: 0 15px;
+            color: #fff;
+          }
+        }
+
+        // info
+        &__info {
+          text-align: center;
+          background-color: #fff;
+          padding: 1.7rem 0;
+          margin-top: -55px;
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+          box-shadow: 0px 0px 5px -2px #ddd;
+
+          .card__name {
+            line-height: 1.7;
+            @include font-primary-bold;
+            font-size: 1.3rem;
+            opacity: .87;
+            font-weight: bolder;
+          }
+          .card__position {
+            @include font-secondary-regular;
+            opacity: .75;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+  }
+
+  // users section
+  .users {
+    margin: 5rem 0;
+    &__title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.4rem;
+      @include font-primary-light;
+      span {
+        @include font-primary-bold;
+      }
+
+      &::before {
+        content: "";
+        width: 160px;
+        height: 5px;
+        display: block;
+        background: $color-primary;
+        margin: auto;
+        margin-bottom: 1.5rem;
+      }
+    }
+    .slider {
+      &__width {
+        width: 100%;
+        display: flex;
+        margin: auto;
+        justify-content: center;
+      }
+      &__user {
+        width: 380px;
+        border-radius: 10px;
+        margin: 0 1rem;
+        padding: 1.5em;
+        border: 2px solid #fff;
+        background-color: #fff;
+        transition: all .3s ease-out;
+        &:hover {
+          border: 2px solid #fe8464;
+          transition: all .3s ease-out;
+        }
+      }
+      .hidden-user {
+        display: none;
+      }
+      // para los elementos dentro la card
+      .user {
+        &__header {
+          display: flex;
+          justify-content: space-between;
+          margin: .6rem 0 1rem 0;
+          i {
+            color: #fe8464;
+          }
+        }
+        &__description {
+          height: 100%;
+          margin: 2rem 0;
+          p {
+            line-height: 1.5;
+            opacity: .6;
+            @include font-secondary-regular;
+          }
+        }
+        &__footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          img {
+            width: 80px;
+            height: 80px;
+          }
+        }
+        &__info {
+          @include font-primary-bold;
+          .user__name {
+            font-size: 1.3rem;
+            opacity: .85;
+          }
+          .user__position {
+            font-size: .9rem;
+            opacity: .7;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+  }
+}
