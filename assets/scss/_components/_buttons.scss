@@ -74,3 +74,30 @@
     }
   }
 }
+
+// boton para subscribe
+.subscribe-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #fff;
+  background: $color-primary;
+
+  &:hover {
+    animation: fadeInLeft2 .2s ease-in;
+    
+    @keyframes fadeInLeft2 {
+      0% {
+        transform: translateX(0px);
+        background: $color-primary;
+      }
+      
+      100% {
+        transform: translateX(0px);
+        background: linear-gradient(to right, 
+       #f66e9a 0%, #fe8464 50%, #f66e9a 100%);
+      }
+    }
+  }
+}

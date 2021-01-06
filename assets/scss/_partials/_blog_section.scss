@@ -1,6 +1,6 @@
 .blog {
   width: 100%;
-  margin: 5rem auto;
+  margin: 5rem auto 0 auto;
   &__title {
     // margin-left: 5.3rem;
     width: 88%;
@@ -52,10 +52,11 @@
       &__description + span { // usamos selector de hermano directo
         margin-right: 1rem;
         color: #fe8464;
-        
+        cursor: pointer;
       }
       &__description ~ i { // usamos selector de hermano cualquiera
         color: #fe8464;
+        cursor: pointer;
       }
     }
   }
