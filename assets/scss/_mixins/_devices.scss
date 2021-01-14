@@ -1,0 +1,16 @@
+$small: 360px;
+$medium: 640px;
+$large: 991px;
+$xlarge: 1270px;
+
+@mixin large {
+  @media screen and (max-width: $large) {
+    @content;
+  }
+}
+
+@mixin  xlarge {
+  @media screen and (max-width: $xlarge) {
+    @content;
+  }
+}

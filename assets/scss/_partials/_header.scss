@@ -10,10 +10,58 @@
   position: fixed;
   z-index: $z-fixed;
 
- .menu-principal {
-   a {
+  @include large {
+    display: none;
+  }
+  
+  .menu-principal { 
+    a {
      color: #fff;
      padding: 0 1em;
    }
  }
+}
+
+.menu-mobile {
+  display: none;
+
+  @include large {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em 0;
+    @include font-primary-medium;
+    font-size: 1.1rem;
+    position: fixed;
+    z-index: $z-fixed;
+
+    .logo {
+      margin-right: 12rem;
+    }
+    .burger-menu {
+      margin-left: 12rem;
+      color: #fff;
+      font-size: 1.7rem;
+    }
+  
+    .menu-principal {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background: white;
+      width: 80%;
+      top: -235px;
+      padding-top: 2.8em;
+      padding-left: 2em;
+      padding-bottom: .5em;
+
+      a{
+        padding-top: .5em;
+        @include font-primary-regular;
+        font-size: 1.1em;
+        color: lighten($color: #000000, $amount: 25);
+      }
+    }
+  }
 }

@@ -7,10 +7,36 @@
     display: flex;
     flex-wrap: wrap;
     width: 80%;
+
+    @include xlarge {
+      width: 100%;
+      padding: 0 2em;
+    }
   }
+
+  // Para invertir el orden de los divs
+  @include large {
+    &__container:nth-child(2) {
+      display: flex;
+      .about__image {
+        order: 2;
+      }
+      .about__body {
+        order: 1;
+      }
+    }
+  }
+
   &__body {
-    width: 50%;
+    // width: 50%;
     margin: auto;
+    width: 46%;
+
+    @include large {
+      width: 55%;
+      margin-left: 5rem;
+      margin-bottom: 2rem;
+    }
   }
   &__body:nth-child(2) {
     padding-left: 1em;
@@ -42,6 +68,14 @@
   &__image {
     img {
       width: 500px;
+
+      @include large {
+        width: 80%;
+      }
+    }
+
+    @include large {
+      margin-left: 5rem;
     }
   }
 }

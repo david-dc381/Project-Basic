@@ -28,11 +28,32 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
     &__container {
       margin: 0 1rem;
+      
+      @include xlarge {
+        margin: 0 .5rem;
+      }
     }
     .post {
       width: 370px;
+      @include xlarge {
+        width: 300px;
+        
+        &__figure {
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      @include large {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+      }
+    
       &__author {
         margin: 1rem 0;
         span {

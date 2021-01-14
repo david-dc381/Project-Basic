@@ -47,9 +47,58 @@ li {
   position: fixed;
   z-index: 100;
 }
+@media screen and (max-width: 991px) {
+  .menu-pc {
+    display: none;
+  }
+}
 .menu-pc .menu-principal a {
   color: #fff;
   padding: 0 1em;
+}
+
+.menu-mobile {
+  display: none;
+}
+@media screen and (max-width: 991px) {
+  .menu-mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em 0;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    position: fixed;
+    z-index: 100;
+  }
+  .menu-mobile .logo {
+    margin-right: 12rem;
+  }
+  .menu-mobile .burger-menu {
+    margin-left: 12rem;
+    color: #fff;
+    font-size: 1.7rem;
+  }
+  .menu-mobile .menu-principal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    width: 80%;
+    top: -235px;
+    padding-top: 2.8em;
+    padding-left: 2em;
+    padding-bottom: 0.5em;
+  }
+  .menu-mobile .menu-principal a {
+    padding-top: 0.5em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    color: #404040;
+  }
 }
 
 main {
@@ -142,6 +191,16 @@ main {
   flex-wrap: wrap;
   text-align: center;
 }
+@media screen and (max-width: 1270px) {
+  .feature .features-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .feature .features-container {
+    width: 50%;
+  }
+}
 .feature .feature-card {
   width: 350px;
   border-radius: 10px;
@@ -151,6 +210,19 @@ main {
   background-color: #fff;
   border: 2px solid #fff;
   transition: all 0.3s ease-in;
+}
+@media screen and (max-width: 1270px) {
+  .feature .feature-card {
+    width: 300px;
+    padding: 10px 0px 50px 0px;
+    margin-top: 0px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .feature .feature-card {
+    width: 500px;
+    margin-bottom: 2rem;
+  }
 }
 .feature .feature-card:hover {
   transition: all 0.5s ease-out;
@@ -169,6 +241,11 @@ main {
   left: 90px;
   top: -19px;
 }
+@media screen and (max-width: 991px) {
+  .feature .feature-card .img-div img:nth-child(1) {
+    left: 173px;
+  }
+}
 .feature .feature-card .img-div i {
   position: relative;
   left: -60px;
@@ -183,9 +260,19 @@ main {
   position: relative;
   left: 84px !important;
 }
+@media screen and (max-width: 991px) {
+  .feature .feature-card .img-div .medio {
+    left: 164px !important;
+  }
+}
 .feature .feature-card .img-div .ultimo {
   position: relative;
   left: 93px !important;
+}
+@media screen and (max-width: 991px) {
+  .feature .feature-card .img-div .ultimo {
+    left: 175px !important;
+  }
 }
 .feature .feature-card__title {
   font-family: "Lato", sans-serif;
@@ -217,9 +304,33 @@ main {
   flex-wrap: wrap;
   width: 80%;
 }
+@media screen and (max-width: 1270px) {
+  .about__container {
+    width: 100%;
+    padding: 0 2em;
+  }
+}
+@media screen and (max-width: 991px) {
+  .about__container:nth-child(2) {
+    display: flex;
+  }
+  .about__container:nth-child(2) .about__image {
+    order: 2;
+  }
+  .about__container:nth-child(2) .about__body {
+    order: 1;
+  }
+}
 .about__body {
-  width: 50%;
   margin: auto;
+  width: 46%;
+}
+@media screen and (max-width: 991px) {
+  .about__body {
+    width: 55%;
+    margin-left: 5rem;
+    margin-bottom: 2rem;
+  }
 }
 .about__body:nth-child(2) {
   padding-left: 1em;
@@ -252,6 +363,16 @@ main {
 .about__image img {
   width: 500px;
 }
+@media screen and (max-width: 991px) {
+  .about__image img {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .about__image {
+    margin-left: 5rem;
+  }
+}
 
 .why {
   width: 100%;
@@ -262,6 +383,16 @@ main {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 1270px) {
+  .why__container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why__container {
+    width: 85%;
+  }
 }
 .why__image {
   position: relative;
@@ -277,10 +408,21 @@ main {
   opacity: 0.4;
   border-radius: 15px;
 }
+@media screen and (max-width: 991px) {
+  .why__image::before {
+    width: 100%;
+    height: 99.1%;
+  }
+}
 .why__image .background-video {
   width: 500px;
   z-index: 10;
   position: relative;
+}
+@media screen and (max-width: 991px) {
+  .why__image .background-video {
+    width: 100%;
+  }
 }
 .why__image .dots-img {
   width: 400px;
@@ -288,6 +430,11 @@ main {
   position: absolute;
   top: 160px;
   left: -40px;
+}
+@media screen and (max-width: 991px) {
+  .why__image .dots-img {
+    width: 100%;
+  }
 }
 .why__image .video-icon {
   margin: 35% -55%;
@@ -298,6 +445,17 @@ main {
 }
 .why__body {
   padding: 0 0 0 7em;
+}
+@media screen and (max-width: 1270px) {
+  .why__body {
+    padding: 0 0 0 0.6em;
+  }
+}
+@media screen and (max-width: 991px) {
+  .why__body {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 .why__title {
   font-size: 2.2rem;
@@ -325,7 +483,7 @@ main {
   opacity: 0.75;
   width: 450px;
 }
-.why .footer {
+.why .footer-why {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -397,6 +555,22 @@ main {
   justify-content: space-evenly;
   position: relative;
 }
+@media screen and (max-width: 1270px) {
+  .team .members__container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1270px) {
+  .team .members__container .card {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .team .members__container .card {
+    width: 316px;
+    margin-bottom: 2rem;
+  }
+}
 .team .members__container .card:hover .card__social {
   background: linear-gradient(to right, #fe8464 0%, #f66e9a 50%, #fe8464 100%);
 }
@@ -407,6 +581,11 @@ main {
   width: 350px;
   height: 293px;
   vertical-align: top;
+}
+@media screen and (max-width: 1270px) {
+  .team .members__container .card__figure img {
+    width: 315px;
+  }
 }
 .team .members__container .card__social {
   position: relative;
@@ -426,6 +605,11 @@ main {
   margin: 0 15px;
   color: #fff;
 }
+@media screen and (max-width: 1270px) {
+  .team .members__container .card__social i {
+    margin: 0 10px;
+  }
+}
 .team .members__container .card__info {
   text-align: center;
   background-color: #fff;
@@ -434,6 +618,11 @@ main {
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
   box-shadow: 0px 0px 5px -2px #ddd;
+}
+@media screen and (max-width: 1270px) {
+  .team .members__container .card__info {
+    width: 315px;
+  }
 }
 .team .members__container .card__info .card__name {
   line-height: 1.7;
@@ -486,6 +675,11 @@ main {
   border: 2px solid #fff;
   background-color: #fff;
   transition: all 0.3s ease-out;
+}
+@media screen and (max-width: 1270px) {
+  .team .users .slider__user {
+    margin: 0 0.2rem;
+  }
 }
 .team .users .slider__user:hover {
   border: 2px solid #fe8464;
@@ -569,8 +763,28 @@ main {
 .blog .posts__container {
   margin: 0 1rem;
 }
+@media screen and (max-width: 1270px) {
+  .blog .posts__container {
+    margin: 0 0.5rem;
+  }
+}
 .blog .posts .post {
   width: 370px;
+}
+@media screen and (max-width: 1270px) {
+  .blog .posts .post {
+    width: 300px;
+  }
+  .blog .posts .post__figure img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .blog .posts .post {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+  }
 }
 .blog .posts .post__author {
   margin: 1rem 0;
@@ -604,6 +818,11 @@ main {
   background-image: url("../../assets/img/footer-bg.svg");
   background-position: top center;
 }
+@media screen and (max-width: 1270px) {
+  .footer {
+    background-size: cover;
+  }
+}
 
 .subscribe {
   background-color: #fff;
@@ -617,11 +836,28 @@ main {
   border-radius: 10px;
   box-shadow: 0px 0px 11px 0px #ddd;
 }
+@media screen and (max-width: 1270px) {
+  .subscribe {
+    padding: 4rem 2em;
+  }
+}
 .subscribe__title {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
   font-size: 2.4rem;
   margin-right: 4rem;
+}
+@media screen and (max-width: 1270px) {
+  .subscribe__title {
+    width: 83%;
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .subscribe__title {
+    width: 100%;
+    font-size: 2.3rem;
+  }
 }
 .subscribe__title span {
   font-family: "Roboto", sans-serif;
@@ -630,6 +866,12 @@ main {
 .subscribe__form {
   display: flex;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 1270px) {
+  .subscribe__form {
+    width: 90%;
+    margin-top: 3rem;
+  }
 }
 .subscribe__input {
   width: 320px;
@@ -642,6 +884,16 @@ main {
   font-weight: 700;
   font-size: 1rem;
   outline-color: #f75d37;
+}
+@media screen and (max-width: 1270px) {
+  .subscribe__input {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .subscribe__input {
+    width: 60%;
+  }
 }
 
 .information {

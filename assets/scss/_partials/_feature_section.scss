@@ -25,6 +25,13 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     text-align: center;
+
+    @include xlarge {
+      width: 100%;
+    }
+    @include large {
+      width: 50%;
+    }
   }
   .feature-card {
     width: 350px;
@@ -36,6 +43,15 @@
     border: 2px solid #fff;
     transition: all .3s ease-in;
 
+    @include xlarge {
+      width: 300px;
+      padding: 10px 0px 50px 0px;
+      margin-top: 0px;
+    }
+    @include large {
+      width: 500px;
+      margin-bottom: 2rem;
+    }
 
     &:hover {
       transition: all .5s ease-out;
@@ -54,6 +70,10 @@
         position: absolute;
         left: 90px;
         top: -19px;
+
+        @include large {
+          left: 173px;
+        }
       }
       i {
         position: relative;
@@ -69,10 +89,16 @@
       .medio {
         position: relative;
         left: 84px !important;
+        @include large {
+          left: 164px !important;
+        }
       }
       .ultimo {
         position: relative;
         left: 93px !important;
+        @include large {
+          left: 175px !important;
+        }
       }
     }
     
