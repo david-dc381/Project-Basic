@@ -20,10 +20,18 @@ main {
     top: 25%;
     left: 0;
     right: 25%;
+
+    @include medium {
+      top: 17%;
+    }
   } 
   &__title {
     color: #fff;
     font-size: 2.5rem;
+
+    @include medium {
+      font-size: 1.7rem;
+    }
     @include font-primary-regular;
     span {
       @include font-primary-bold;
@@ -32,6 +40,15 @@ main {
   &__description {
     margin: 2.5rem 0;
     color: #fff;
+
+    @include medium {
+      margin: 2.5rem 3rem;
+      font-size: 1rem;
+    }
+    @include small {
+      margin: 2.5rem 1rem;
+      line-height: 1.5;
+    }
   }
   // para la img de la computadora
   .computer {
@@ -40,6 +57,13 @@ main {
     .computer-img {
       width: 50%;
       max-width: 669px;
+
+      @include medium {
+        width: 90%;
+      }
+      @include small {
+        width: 100%;
+      }
     }
   }
 
@@ -49,12 +73,25 @@ main {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
+    @include medium {
+      margin-top: 5rem;
+      width: 90%;
+    }
+    @include small {
+      margin-top: 0rem;
+    }
     img {
       width: 160px;
       margin: 0 auto; // para centrear las img cuando se haga pequeño la pantalla
       height: auto;
       opacity: .5;
       margin-bottom: 15px;
+
+      @include small {
+        width: 130px;
+        margin-bottom: 30px;
+      }
 
       &:hover {
         transition: all .3s ease-in;

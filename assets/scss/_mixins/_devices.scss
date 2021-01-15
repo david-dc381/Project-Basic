@@ -3,6 +3,18 @@ $medium: 640px;
 $large: 991px;
 $xlarge: 1270px;
 
+@mixin small {
+  @media screen and (max-width: $small) {
+    @content;
+  }
+}
+
+@mixin  medium {
+  @media screen and (max-width: $medium) {
+    @content;
+  }
+}
+
 @mixin large {
   @media screen and (max-width: $large) {
     @content;

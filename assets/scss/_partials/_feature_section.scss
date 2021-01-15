@@ -32,6 +32,9 @@
     @include large {
       width: 50%;
     }
+    @include medium {
+      width: 95%;
+    }
   }
   .feature-card {
     width: 350px;
@@ -52,6 +55,9 @@
       width: 500px;
       margin-bottom: 2rem;
     }
+    @include medium {
+      width: 100%;
+    }
 
     &:hover {
       transition: all .5s ease-out;
@@ -65,40 +71,27 @@
     
     .img-div {
       position: relative;
-      margin: 50px 0;
-      img:nth-child(1) {
-        position: absolute;
-        left: 90px;
-        top: -19px;
+      top: 18%;
 
-        @include large {
-          left: 173px;
-        }
+      .back-img {
+        position: relative;
+        margin: auto;
+        display: flex;
       }
+
+      .feature-card__img {
+        position: relative;
+        margin: auto;
+        display: flex;
+        top: -103px;
+      }
+    
       i {
         position: relative;
-        left: -60px;
-        top: -25px;
+        top: -150px;
+        left: -5px;
         font-size: 30px;
         color: #fff;
-      }
-      .back-img {
-        transition: all .3s ease-in;
-      }
-      // medio y ultimo son para la penultima y ultima img de fondo, las que son transparentes
-      .medio {
-        position: relative;
-        left: 84px !important;
-        @include large {
-          left: 164px !important;
-        }
-      }
-      .ultimo {
-        position: relative;
-        left: 93px !important;
-        @include large {
-          left: 175px !important;
-        }
       }
     }
     

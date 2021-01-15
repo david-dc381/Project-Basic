@@ -15,6 +15,14 @@ h1,h2,h3,h4,h5,h6 {
   @include font-primary-medium();
 }
 
+h2 {
+  color: #2E2E2E;
+  opacity: 1 !important;
+  @include medium {
+    font-size: 1.6rem !important;
+  }
+}
+
 p, span, a {
   @include font-secondary-regular();
 }

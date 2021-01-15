@@ -32,16 +32,21 @@
       @include xlarge {
         width: 100%;
       }
+      @include medium {
+        width: 90%;
+      }
 
       .card {
         @include xlarge {
           width: 300px;
         }
-
         @include large {
           // width: 53%;
           width: 316px;
           margin-bottom: 2rem;
+        }
+        @include medium {
+          width: 100%;
         }
 
         // hover para cambia el fondo de las redes sociales
@@ -61,6 +66,10 @@
             @include xlarge {
               width: 315px;
             }
+            @include medium {
+              width: 100%;
+              height: auto;
+            }
           }
         }
 
@@ -77,6 +86,10 @@
           padding: 20px;
           cursor: pointer;
           transition: all 0.4s ease-in;
+          @include medium {
+            margin: auto;
+            // margin-left: 13%;
+          }
 
           i {
             margin: 0 15px;
@@ -100,6 +113,9 @@
 
           @include xlarge {
             width: 315px;
+          }
+          @include medium {
+            width: 100%;
           }
 
           .card__name {
