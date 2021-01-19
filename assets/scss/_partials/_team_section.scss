@@ -157,13 +157,15 @@
         margin-bottom: 1.5rem;
       }
     }
-    .slider {
+    .slider {          
       &__width {
         width: 100%;
         display: flex;
         margin: auto;
         justify-content: center;
+        flex-wrap: wrap;
       }
+     
       &__user {
         width: 380px;
         border-radius: 10px;
@@ -174,7 +176,7 @@
         transition: all .3s ease-out;
 
         @include xlarge {
-          margin: 0 .2rem;
+          margin: 1rem 1rem 0 1rem;
         }
 
         &:hover {
@@ -183,7 +185,7 @@
         }
       }
       .hidden-user {
-        display: none;
+        // display: none;
       }
       // para los elementos dentro la card
       .user {
@@ -229,3 +231,4 @@
     }
   }
 }
+

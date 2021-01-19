@@ -805,6 +805,7 @@ main {
   display: flex;
   margin: auto;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .team .users .slider__user {
   width: 380px;
@@ -817,15 +818,12 @@ main {
 }
 @media screen and (max-width: 1270px) {
   .team .users .slider__user {
-    margin: 0 0.2rem;
+    margin: 1rem 1rem 0 1rem;
   }
 }
 .team .users .slider__user:hover {
   border: 2px solid #fe8464;
   transition: all 0.3s ease-out;
-}
-.team .users .slider .hidden-user {
-  display: none;
 }
 .team .users .slider .user__header {
   display: flex;
