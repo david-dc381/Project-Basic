@@ -15,38 +15,40 @@
 <body>
 	<header>
 		<!-- Menú Pc -->
-		<div class="menu-pc">
+		<div class="menu-pc" id="menu-pc">
 			<a href="#" class="logo">
-					<img src="assets/img/logo.svg" alt="log basic">
+				<img src="assets/img/logo.svg" alt="log basic">
 			</a>
-			<nav class="menu-principal">
-					<a href="#">Home</a>
-					<a href="#features">Features</a>
-					<a href="#about">About</a>
-					<a href="#why">Why</a>
-					<a href="#team">Team</a>
-					<a href="#blog">Blog</a>
+			<nav class="menu-principal" id="pc">
+				<a href="#" class="volver-arriba">Home</a>
+				<a href="#features" class="scroll-suave">Features</a>
+				<a href="#about" class="scroll-suave">About</a>
+				<a href="#why" class="scroll-suave">Why</a>
+				<a href="#team" class="scroll-suave">Team</a>
+				<a href="#blog" class="scroll-suave">Blog</a>
 			</nav>
 		</div>
 		<!-- Fin Menú Pc -->
 
 		<!-- Menú Mobile -->
-		<div class="menu-mobile">
-				<a href="#" class="logo">
-						<img src="assets/img/logo.svg" alt="log basic">
+		<div class="menu-mobile" id="menu-mobile">
+				<a href="#" class="logo logo-movil">
+					<img src="assets/img/logo.svg" alt="log basic">
 				</a>
 
 				<div class="burger-menu" id="burger-menu">
 					<i class="fa fa-bars" aria-hidden="true"></i>
 				</div>
-				<nav class="menu-principal">
-						<a href="#"></a>
-						<a href="#features">Features</a>
-						<a href="#about">About</a>
-						<a href="#why">Why</a>
-						<a href="#team">Team</a>
-						<a href="#blog">Blog</a>
-				</nav>
+				<div id="slide-menu">
+					<nav class="menu-principal">
+						<a href="#" class="volver-arriba">Home</a>
+						<a href="#features" class="scroll-suave">Features</a>
+						<a href="#about" class="scroll-suave">About</a>
+						<a href="#why" class="scroll-suave">Why</a>
+						<a href="#team" class="scroll-suave">Team</a>
+						<a href="#blog" class="scroll-suave">Blog</a>
+					</nav>
+				</div>
 		</div>
 		<!-- Fin Menú Mobile -->
 	</header>
@@ -80,7 +82,7 @@
 		<!-- Fin Banner -->
 
 		<!-- Features -->
-		<section id="feature" class="feature">
+		<section id="features" class="feature">
 			<h2 class="feature__title">
 				<span>Clean and simple design,</span> Comes with everything you <br> need to get started!
 			</h2>
@@ -183,7 +185,7 @@
 		<!-- Fin About -->
 
 		<!-- Why -->
-		<div class="why">
+		<div id="why" class="why">
 			<div class="why__container">
 				<div class="why__image">
 					<img src="assets/img/dots.svg" alt="dots image" class="dots-img">
@@ -219,7 +221,7 @@
 		<!-- Fin Why -->
 
 		<!-- Team -->
-		<div class="team" id="#team">
+		<div id="team" class="team">
 			<div class="members">
 				<h2 class="members__title">Meet Our <span>Creative Team <br> Members</span></h2>
 				<div class="members__container">
@@ -405,7 +407,7 @@
 		<!-- Fin Team -->
 
 		<!-- Blog -->
-		<div class="blog" id="blog">
+		<div id="blog" class="blog">
 			<h2 class="blog__title">Our Recent <span>Blog Posts</span></h2>
 
 			<div class="posts">
@@ -533,4 +535,7 @@
 	</footer>
 
 </body>
+<script src="assets/js/stickyHeader.js"></script>
+<script src="assets/js/menuMovil.js"></script>
+<script src="assets/js/scroll.js"></script>
 </html>

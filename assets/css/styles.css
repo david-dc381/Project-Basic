@@ -50,12 +50,12 @@ li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2em 0;
+  padding: 1em 0;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
 }
 @media screen and (max-width: 991px) {
   .menu-pc {
@@ -67,6 +67,12 @@ li {
   padding: 0 1em;
 }
 
+/* para el cambio de color del menu al hacer scroll */
+.pc a {
+  color: #474747 !important;
+  transition: all 0.3s ease-in;
+}
+
 .menu-mobile {
   display: none;
 }
@@ -74,22 +80,23 @@ li {
   .menu-mobile {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 2em 0;
+    padding: 1em 0;
     font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 1.1rem;
     position: fixed;
-    z-index: 100;
+    z-index: 1000;
   }
   .menu-mobile .logo {
-    margin-right: 12%;
+    margin-right: 25%;
   }
   .menu-mobile .burger-menu {
-    margin-left: 12%;
+    margin-left: 25%;
     color: #fff;
     font-size: 1.7rem;
+    cursor: pointer;
   }
   .menu-mobile .menu-principal {
     display: flex;
@@ -98,17 +105,42 @@ li {
     background: white;
     width: 80%;
     top: -235px;
-    padding-top: 2.8em;
+    left: 100%;
+    padding-top: 0.8em;
     padding-left: 2em;
     padding-bottom: 0.5em;
+    transition: all 0.5s ease-out !important;
   }
   .menu-mobile .menu-principal a {
     padding-top: 0.5em;
+    padding-bottom: 1em;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1.1em;
     color: #404040;
   }
+  .menu-mobile .active {
+    position: absolute;
+    width: 80%;
+    top: 300px;
+    left: -62%;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+    transition: all 0.5s ease-in !important;
+  }
+}
+@media screen and (max-width: 991px) and (max-width: 640px) {
+  .menu-mobile .active {
+    width: 100%;
+    left: -90%;
+  }
+}
+
+.menu-mobile__black {
+  background-color: #fff;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+}
+.menu-mobile__black i {
+  color: #474747;
 }
 
 main {
@@ -269,11 +301,11 @@ main {
 .feature .feature-card {
   width: 350px;
   border-radius: 10px;
-  box-shadow: 0px 0px 0px 0px #333;
+  box-shadow: 0px 5px 30px 0px rgba(167, 167, 167, 0.16);
   padding: 10px 10px 50px 10px;
   margin-top: 20px;
   background-color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid transparent;
   transition: all 0.3s ease-in;
 }
 @media screen and (max-width: 1270px) {

@@ -4,11 +4,11 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 2em 0;
+  padding: 1em 0;
   @include font-primary-medium;
   font-size: 1.1rem;
   position: fixed;
-  z-index: $z-fixed;
+  z-index: $z-modal;
 
   @include large {
     display: none;
@@ -22,27 +22,36 @@
  }
 }
 
+/* para el cambio de color del menu al hacer scroll */
+.pc {
+  a {
+    color: rgb(71, 71, 71) !important;
+    transition: all .3s ease-in;
+  }
+}
+
 .menu-mobile {
   display: none;
 
   @include large {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 2em 0;
+    padding: 1em 0;
     @include font-primary-medium;
     font-size: 1.1rem;
     position: fixed;
-    z-index: $z-fixed;
+    z-index: $z-modal;
 
     .logo {
-      margin-right: 12%;
+      margin-right: 25%;
     }
     .burger-menu {
-      margin-left: 12%;
+      margin-left: 25%;
       color: #fff;
       font-size: 1.7rem;
+      cursor: pointer;
     }
   
     .menu-principal {
@@ -52,16 +61,43 @@
       background: white;
       width: 80%;
       top: -235px;
-      padding-top: 2.8em;
+      left: 100%;
+      padding-top: 0.8em;
       padding-left: 2em;
       padding-bottom: .5em;
+      transition: all .5s ease-out !important;
 
-      a{
+      a {
         padding-top: .5em;
+        padding-bottom: 1em;
         @include font-primary-regular;
         font-size: 1.1em;
         color: lighten($color: #000000, $amount: 25);
       }
     }
+
+    // para mostrar el menu oculto
+    .active {
+      position: absolute;
+      width: 80%;
+      top: 300px;
+      left: -62%;
+      box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+      transition: all .5s ease-in !important;
+
+      @include medium {
+        width: 100%;
+        left: -90%;
+      }
+    }
+  }
+}
+
+// Para cambiar de color el menu movil cuandi se haga scroll
+.menu-mobile__black {
+  background-color: #fff;
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+  i {
+    color: rgb(71, 71, 71);
   }
 }
