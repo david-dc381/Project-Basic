@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
     <meta name="description" content="A basic project web">
     <meta name="keywords" content="Web, Projects">
-    <meta name="author" content="David Cayo">
+		<meta name="author" content="David Cayo">
+		<link rel="shortcout icon" href="assets/img/favicon.png">
 		<link rel="stylesheet" href="assets/fonts/css/all.min.css">
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
@@ -57,7 +58,7 @@
 		<!-- Banner -->
 		<section id="#" class="main-banner">
 			<div class="main-banner__img">
-				<div class="main-banner__info">
+				<div class="main-banner__info fade_up">
 					<h1 class="main-banner__title">Basic - SaaS Landing Page <br>
 							<span>Kickstart Your SaaS or App Site</span>
 					</h1>
@@ -71,7 +72,7 @@
 				</div>
 			</div>
 
-			<div class="main-aplication">
+			<div class="main-aplication fade_down">
 				<img src="assets/img/brand-1.png" alt="speckyboy logo">
 				<img src="assets/img/brand-2.png" alt="woothemes logo">
 				<img src="assets/img/brand-3.png" alt="pixabay logo">
@@ -87,7 +88,7 @@
 				<span>Clean and simple design,</span> Comes with everything you <br> need to get started!
 			</h2>
 			<div class="features-container">
-				<div class="feature-card">
+				<div class="feature-card fade_up2">
 					<div class="img-div">
 						<img src="assets/img/services-shape.svg" alt="clean logo" class="back-img">
 						<img src="assets/img/services-shape-1.svg" alt="clean logo" class="feature-card__img">
@@ -103,7 +104,7 @@
 					</div>
 				</div>
 	
-				<div class="feature-card">
+				<div class="feature-card fade_up2">
 					<div class="img-div">
 						<img src="assets/img/services-shape.svg" alt="clean logo" class="back-img medio">
 						<img src="assets/img/services-shape-2.svg" alt="clean logo" class="feature-card__img">
@@ -119,7 +120,7 @@
 					</div>
 				</div>
 	
-				<div class="feature-card">
+				<div class="feature-card fade_up2">
 					<div class="img-div">
 						<img src="assets/img/services-shape.svg" alt="clean logo" class="back-img ultimo">
 						<img src="assets/img/services-shape-3.svg" alt="clean logo" class="feature-card__img">
@@ -141,7 +142,7 @@
 		<!-- About -->
 		<section id="about" class="about">
 			<div class="about__container">
-				<div class="about__body">
+				<div class="about__body fade_left">
 						<h2 class="about__title"> <span>Quick & Easy</span> to <br> Use Bootstrap Template</h2>
 						<p class="about__copy">
 								Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.
@@ -149,17 +150,17 @@
 						<button class="main-button button--about">Try it Free</button>
 				</div>
 
-				<div class="about__image">
+				<div class="about__image fade_right">
 						<img src="assets/img/about1.svg" alt="quick and easy image">
 				</div>
 			</div>
 
 			<div class="about__container">
-				<div class="about__image">
+				<div class="about__image fade_left">
 					<img src="assets/img/about2.svg" alt="modern image">
 				</div>
 
-				<div class="about__body">
+				<div class="about__body fade_right">
 					<h2 class="about__title"><span>Modern design</span> with Essential Features</h2>
 					<p class="about__copy">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.
@@ -169,7 +170,7 @@
 			</div>
 
 			<div class="about__container">
-				<div class="about__body">
+				<div class="about__body fade_left">
 					<h2 class="about__title">Crafted for <span>SaaS, App and Software Landing Page</span></h2>
 					<p class="about__copy">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing.
@@ -177,7 +178,7 @@
 					<button class="main-button button--about">Try it Free</button>
 				</div>
 
-				<div class="about__image">
+				<div class="about__image fade_right">
 					<img src="assets/img/about3.svg" alt="app and software image">
 				</div>
 			</div>
@@ -187,15 +188,22 @@
 		<!-- Why -->
 		<div id="why" class="why">
 			<div class="why__container">
-				<div class="why__image">
+				<div class="why__image fade_down">
 					<img src="assets/img/dots.svg" alt="dots image" class="dots-img">
 					<img src="assets/img/video.png" alt="video image" class="background-video">
-					<a href="https://www.youtube.com/watch?v=r44RKWyfcFw" target="_blank" class="video-icon">
+					<a class="video-icon" id="video-icon">
 						<i class="fas fa-play-circle"></i>
 					</a>
 				</div>
+				<div class="video-modal" id="video-modal">
+					<iframe id="iframe" width="560" height="315" 
+						src="https://www.youtube.com/embed/r44RKWyfcFw" 
+						frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+					</iframe>
+					<i class="fas fa-times"></i>
+				</div>
 
-				<div class="why__body">
+				<div class="why__body fade_down">
 					<h2 class="why__title"><span>Cool facts</span> about this app</h2>
 					<p class="why__copy">
 							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, seiam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -226,7 +234,7 @@
 				<h2 class="members__title">Meet Our <span>Creative Team <br> Members</span></h2>
 				<div class="members__container">
 
-					<div class="card">
+					<div class="card fade_left">
 						<div class="card__header">
 							<div class="card__figure">
 								<img src="./assets/img/team-1.png" alt="Isabela Moreira photo">
@@ -244,7 +252,7 @@
 						</div>
 					</div>
 
-					<div class="card">
+					<div class="card fade_up2">
 						<div class="card__header">
 							<div class="card__figure">
 								<img src="./assets/img/team-2.png" alt="Elon Musk photo">
@@ -262,7 +270,7 @@
 						</div>
 					</div>
 
-					<div class="card">
+					<div class="card fade_right">
 						<div class="card__header">
 							<div class="card__figure">
 								<img src="./assets/img/team-3.png" alt="Fiona Smith photo">
@@ -285,7 +293,7 @@
 			<!-- Users -->
 			<div class="users">
 				<h2 class="users__title"> <span>Users sharing</span> their <br> experience</h2>
-				<div class="slider">
+				<div class="slider fade_down">
 					<div class="slider__width">
 
 						<div class="slider__user">
@@ -410,7 +418,7 @@
 		<div id="blog" class="blog">
 			<h2 class="blog__title">Our Recent <span>Blog Posts</span></h2>
 
-			<div class="posts">
+			<div class="posts fade_down">
 				<div class="posts__container">
 					<div class="post">
 						<div class="post__header">
@@ -479,7 +487,7 @@
 			</form>
 		</div>
 
-		<div class="information">
+		<div class="information fade_up2">
 			<div class="card--basic">
 				<img src="assets/img/logo.svg" alt="logo Basic">
 				<p class="card__description">
@@ -534,8 +542,16 @@
 		</div>
 	</footer>
 
+	<div class="btn-volver-arriba" id="btnVolverArriba">
+		<a href="#" class="volver-arriba">
+			<i class="fas fa-arrow-alt-circle-up"></i>
+		</a>
+	</div>
+
 </body>
 <script src="assets/js/stickyHeader.js"></script>
 <script src="assets/js/menuMovil.js"></script>
 <script src="assets/js/scroll.js"></script>
+<script src="assets/js/popUpVideo.js"></script>
+<script src="assets/js/fade.js"></script>
 </html>

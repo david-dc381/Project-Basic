@@ -1,0 +1,91 @@
+// Para la seccion About
+.about__body, .about__image {
+  opacity: .3;
+  transition: all 1s;
+}
+// para la sección del banner
+.main-banner__info {
+    transition: all 7s;
+    position: relative;
+    animation-name: arriba;
+    animation-duration: 3s;
+}
+// seccion de las marcas de banner
+.main-aplication {
+  opacity: .1;
+  transition: all 2s;
+}
+// seccion de l about
+.feature-card {
+  opacity: .1;
+  transition: all 4s;
+}
+
+// seccion de why
+.why__image {
+  opacity: .3;
+  transition: all 2s;
+}
+.why__body {
+  opacity: 0;
+  transition: all 3s;
+}
+
+// seccion team
+.team .card {
+  transition: all 2s;
+}
+// seccion usuarios
+.slider {
+  opacity: 0;
+  transition: all 1s;
+}
+
+// seccion de blog-> posts
+.posts {
+  opacity: .3;
+  transition: all 2s;
+}
+
+// footer
+.footer {
+  .information {
+    transition: all 2s;
+  }
+}
+
+
+
+// Efectos
+.transform_left {
+  transform: translateX(-20%);
+}
+
+.transform_right {
+  transform: translateX(20%);
+}
+
+.transform_up {
+    @keyframes arriba {
+        0% {
+            bottom: -30%;
+            opacity: .3;
+        }
+        100% {
+            bottom: 0%;
+            opacity: 1;
+        }
+    }
+}
+.transform_up2 {
+  transform: translateY(10%);
+}
+
+.transform_down {
+  transform: translateY(20%);
+}
+
+.aparece {
+  opacity: 1;
+  transform: none;
+}

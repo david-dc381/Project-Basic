@@ -20,10 +20,12 @@
         );
       }
 
-      propiedadesScroll.volverArriba[0].addEventListener(
-        "click",
-        metodosScroll.subir
-      );
+      for (let i = 0; i < propiedadesScroll.volverArriba.length; i++) {
+        propiedadesScroll.volverArriba[i].addEventListener(
+          "click",
+          metodosScroll.subir
+        );
+      }
     },
 
     moverse: function(e) {

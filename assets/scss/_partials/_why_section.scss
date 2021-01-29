@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
 
     @include xlarge {
       width: 100%;
@@ -57,9 +58,66 @@
     .video-icon {
       margin: 35% -55%;
       position: absolute;
-      z-index: $z-fixed;
+      z-index: $z-fixed + 100;
       font-size: 4rem;
       color: #fff;
+      cursor: pointer;
+
+    }
+  }
+  .video-modal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(#000000, .8);
+    top: 0;
+    z-index: $z-modal + 1;/* +1, para que no intervenga con el z-index del btn-volver-arriba del footer */
+
+    iframe {
+      display: block;
+      width: 55%;
+      height: 75%;
+      margin: auto;
+      position: relative;
+      top: 20%;
+
+      @include large {
+        width: 70%;
+        height: 57%;
+      }
+      @include medium {
+        width: 60%;
+        height: 55%;
+      }
+      @include small {
+        width: 90%;
+        height: 45%;
+      }
+      
+    }
+    i {
+      color: rgba(#fff, .6);
+      position: relative;
+      top: -60%;
+      left: 80%;
+      font-size: 2.5rem;
+      cursor: pointer;
+      @include large {
+        top: -40%;
+        // left: 90%;
+      }
+      @include medium {
+        top: -45%;
+        // left: 45%;
+      }
+      @include small {
+        top: -35%;
+      }
+      
+      &:hover {
+        color: #fff;
+      }
     }
   }
 

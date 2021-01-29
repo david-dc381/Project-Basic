@@ -4,6 +4,8 @@ const logo = document.querySelectorAll('.logo > img');
 // para el menu movil
 const movil = document.getElementById('menu-mobile');
 const movilLogo = document.querySelectorAll('.logo-movil > img');
+// para el boton que nos ahce volver hasta arriba
+const btnArriba = document.getElementById('btnVolverArriba');
 
 window.onscroll = () => {
   // documnetElement, hace referencia al elemento raiz como el html
@@ -17,6 +19,12 @@ window.onscroll = () => {
     // para el menu móvil
     movil.classList.add('menu-mobile__black');
     movilLogo[0].setAttribute("src", "assets/img/logo-2.svg");
+
+    if ( document.documentElement.scrollTop >= 1080 ) {
+      btnArriba.style.right = "1.5rem";
+    } else {
+      btnArriba.style.right = "-4rem";
+    }
 
   } else {
     scroll.style.backgroundColor = "";
